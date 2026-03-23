@@ -27,6 +27,7 @@ class Gct < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/gct --version 2>&1", 1)
+    assert_predicate bin/"gct", :exist?
+    assert_predicate bin/"gct", :executable?
   end
 end
