@@ -1,22 +1,22 @@
 class Gct < Formula
   desc "Terminal UI tool for overseeing Git/GitHub workflows"
   homepage "https://github.com/katzkb/git-control-tower"
-  version "0.0.12"
+  version "0.0.13"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/katzkb/git-control-tower/releases/download/v#{version}/gct-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "c213341e11d907b81bb0829447141d600e5ff2de35a7ab561d79c193f2b3e2c4"
+      sha256 "c0310340db566be262cb8853df19e092625beaf8c4500d2095c6eb9011431938"
     else
       url "https://github.com/katzkb/git-control-tower/releases/download/v#{version}/gct-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "ec4d804f090f67b1469893e9dae999af038746b924619a2d8a0f500a2908993a"
+      sha256 "adf1003254560e28133978c5d07bf90f2fcb19a1ef45d80e8cc6b6b1bd4b0d29"
     end
   end
 
   on_linux do
     url "https://github.com/katzkb/git-control-tower/releases/download/v#{version}/gct-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "158ab573c2713637046b7e73b73b96147628d17f35ab6ac91a1325e2a19ea1ce"
+    sha256 "c386dbed93d74db4ceda67a1973af3e875792015f831ddcb91c6c65a6556ceb6"
   end
 
   depends_on "git"
